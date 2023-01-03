@@ -25,10 +25,10 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="sidebar">
+    <nav className="sidebar">
       <h3>Movie</h3>
       {SidebarItems()}
-    </div>
+    </nav>
   );
 };
 
