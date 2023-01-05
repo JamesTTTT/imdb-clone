@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Sidebar, Footer, Searchbar } from "./components";
-import { Home, Discover } from "./pages";
+import { Home, Discover, Inspect } from "./pages";
 import "./style/App.css";
 
 const App = () => {
@@ -15,6 +15,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/discover" element={<Discover />} />
+              <Route path="/inspect" element={<Inspect />} />
             </Routes>
             <Footer />
           </div>
