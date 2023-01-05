@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { MovieList, Trending } from "../components";
+import { MovieWrap, Trending } from "../components";
 import tmdb from "../models/tmdb";
 const Home = () => {
   const [trending, setTrending] = useState();
@@ -21,8 +21,8 @@ const Home = () => {
   return (
     <div className="home">
       <Trending data={trending} />
-      <MovieList data={nowPlaying} name={"Now Playing"} />
-      <MovieList data={topRated} name={"Top Rated"} />
+      <MovieWrap data={nowPlaying} name={"Now Playing"} max={7} />
+      <MovieWrap data={topRated} name={"Top Rated"} max={7} />
     </div>
   );
 };
