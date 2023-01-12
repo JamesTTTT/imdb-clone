@@ -34,10 +34,11 @@ const tmdb = {
     return result;
   },
 
-  getMoviesByGenres: async function getMoviesByGenres(id) {
+  getMoviesByGenres: async function getMoviesByGenres(id, score, sort, order) {
     const response = await fetch(
-      `${config.base_url}/discover/movie?api_key=${config.api_key}&with_genres=${id}`
+      `${config.base_url}/discover/movie?api_key=${config.api_key}&with_genres=${id}&vote_average.gte=${score[0]}&vote_average.lte=${score[1]}&sort_by=${sort}.desc`
     );
+    console.log(order);
     const result = await response.json();
     return result;
   },
@@ -57,5 +58,22 @@ const tmdb = {
     const result = await response.json();
     return result;
   },
+
+  getMovieSearch: async function getMovieSearch(prompt) {
+    const response = await fetch(
+      `${config.base_url}/search/movie?api_key=${config.api_key}&query=${prompt}`
+    );
+    const result = await response.json();
+    return result;
+  },
+
+  getCredits: async function getCredits(id) {
+    const response = await fetch(
+      `${config.base_url}/movie/${id}/credits?api_key=${config.api_key}`
+    );
+    const result = await response.json();
+    return result;
+  },
 };
+
 export default tmdb;
