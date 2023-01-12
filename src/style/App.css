@@ -24,6 +24,10 @@ input:focus {
   border-radius: 0 10px  10px 0;
 }
 
+.routes {
+  margin-bottom: auto;
+}
+
 .searchIcon {
   background-color: white;
   color: #141414;
@@ -98,12 +102,15 @@ input:focus {
   padding: 10px;
   overflow: hidden;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items:initial;
 }
 
 .trendingBox {
   min-width: 700px;
   overflow: hidden;
-  height: 390px;
+  height: 393px;
   border-radius: 0.25rem;
   display: flex;
   flex-direction: column;
@@ -111,6 +118,8 @@ input:focus {
   background-repeat: no-repeat;
   background-size: auto;
   cursor: pointer;
+  margin: 5px 0;
+  background-size: contain;
 }
 
 .trendingContainer {
@@ -119,7 +128,7 @@ input:focus {
   justify-content: center;
   align-items: center;
   margin:0 10px;
-  width: fit-content;
+
 }
 
 .flex-row {
@@ -136,6 +145,20 @@ input:focus {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+}
+
+.flex-start {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  margin: 0 5px;
 }
 
 .movieContainer {
@@ -218,7 +241,7 @@ input:focus {
 
 .inspect {
   padding: 2em;
-  width: 780px;
+  max-width: 780px;
   display: flex;
   flex-direction: column;
 }
@@ -241,8 +264,7 @@ input:focus {
 
 button {
   display:inline-block;
-  height: fit-content;
-  padding:1.2em;
+  padding:1.0em;
   border:0.1em solid #FFFFFF;
   border-radius:0.12em;
   box-sizing: border-box;
@@ -259,5 +281,55 @@ button {
 button:hover{
   color:#000000;
   background-color:#FFFFFF;
-  }
+}
 
+.cancelSearch {
+  border-radius: 2em;
+  margin-left: 10px;
+}
+
+.cast-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.cast-box{
+  padding: 8px;
+  max-width: 98px;
+}
+
+.character {
+  font-size: smaller;
+}
+
+.information-box {
+   max-width: 700px;
+}
+
+.menu-button {
+  border: none;
+  padding: 0.2em 0.3em;
+  margin: 20px;
+  font-size: 2em;
+}
+
+.frame {
+  max-width:780;
+  height:440
+}
+
+.filter-box{
+  padding: 0 10px 10px;
+}
+
+.filter-options {
+  padding: 5px;
+  
+}
+
+.deactivate {
+  pointer-events: none;
+  display: none;
+  background-color: #838383;
+}
