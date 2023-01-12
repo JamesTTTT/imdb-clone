@@ -2,6 +2,13 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 const MovieWrap = ({ data, name, max }) => {
   const navigate = useNavigate();
+
+  const releasedate = (release_date) => {
+    if (release_date) {
+      return release_date.slice(0, 4);
+    }
+  };
+
   const movieBoxes = () => {
     data = data.slice(0, max);
     return data.map((item, index) => {
@@ -19,7 +26,7 @@ const MovieWrap = ({ data, name, max }) => {
         >
           <div className="movie-details">
             <p>{item.title}</p>
-            <p>{item.release_date}</p>
+            <p>{releasedate(item.release_date)}</p>
           </div>
         </div>
       );

@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Sidebar, Footer, Searchbar } from "./components";
-import { Home, Discover, Inspect } from "./pages";
+import { Sidebar, Footer, Searchbar, Header } from "./components";
+import { Home, Discover, Inspect, SearchMode } from "./pages";
 import "./style/App.css";
+import "./style/Responsive.css";
 
 const App = () => {
   return (
@@ -11,12 +12,16 @@ const App = () => {
         <div className="page">
           <Sidebar />
           <div className="content">
-            <Searchbar />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/discover" element={<Discover />} />
-              <Route path="/inspect" element={<Inspect />} />
-            </Routes>
+            <Header />
+            <div className="routesnpm">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/search" element={<SearchMode />} />
+                <Route path="/discover" element={<Discover />} />
+                <Route path="/inspect" element={<Inspect />} />
+              </Routes>
+            </div>
+
             <Footer />
           </div>
         </div>
