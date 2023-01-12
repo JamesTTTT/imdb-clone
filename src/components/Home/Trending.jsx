@@ -24,6 +24,12 @@ const Trending = ({ data }) => {
   };
 
   const trendingBoxes = () => {
+    const releasedate = (release_date) => {
+      if (release_date) {
+        return release_date.slice(0, 4);
+      }
+    };
+
     return (
       <div className="trendingContainer">
         <div
@@ -42,7 +48,7 @@ const Trending = ({ data }) => {
         >
           <div className="titleBox">
             <p>{data[boxIndex - 1].title}</p>
-            <p>{data[boxIndex - 1].release_date}</p>
+            <p>{releasedate(data[boxIndex - 1].release_date)}</p>
           </div>
         </div>
         <div
@@ -57,7 +63,7 @@ const Trending = ({ data }) => {
         >
           <div className="titleBox">
             <p>{data[boxIndex].title}</p>
-            <p>{data[boxIndex].release_date}.</p>
+            <p>{releasedate(data[boxIndex].release_date)}</p>
           </div>
         </div>
       </div>
