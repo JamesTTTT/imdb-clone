@@ -1,0 +1,35 @@
+@media screen and (max-width: 1200px) {
+    .trendingBox {
+        min-width: 500px;
+        height: 280px;
+    }
+  }
+
+@media screen and (max-width: 1806px) {
+  .trendingBox {
+      min-width: 600px;
+      height: 337px;
+  }
+}
+
+@media screen and (max-width: 1604px) {
+  .trendingBox {
+      min-width: 400px;
+      height: 225px;
+  }
+}
+
+
+@media screen and (max-width: 630px) {
+  .trendingBox {
+      min-width: 300px;
+      height: 168px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+    .sidebar {
+      position: fixed;
+      padding: 2em 1em;
+    }
+}
