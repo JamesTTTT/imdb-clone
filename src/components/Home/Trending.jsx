@@ -42,7 +42,7 @@ const Trending = ({ data }) => {
         >
           <div className="titleBox">
             <p>{data[boxIndex - 1].title}</p>
-            <p>{data[boxIndex - 1].release_date}.</p>
+            <p>{data[boxIndex - 1].release_date}</p>
           </div>
         </div>
         <div
